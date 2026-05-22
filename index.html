@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supreeti Sehra | Technical Leader & Engineer</title>
+    <!-- Tailwind CSS V3 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: '#D4AF37',
+              'intel-blue': '#0071C5',
+              'app-bg': '#0C0D0F',
+              'app-text': '#E0E2E6',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              serif: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@400;500;700&display=swap');
+
+      :root {
+        --color-gold: #D4AF37;
+        --color-intel-blue: #0071C5;
+        --color-app-bg: #0C0D0F;
+        --color-app-text: #E0E2E6;
+      }
+
+      body {
+        background-color: var(--color-app-bg);
+        color: var(--color-app-text);
+        font-family: 'Inter', sans-serif;
+        font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      }
+
+      .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .font-sans {
+        font-family: 'Inter', sans-serif;
+      }
+
+      .card-bg {
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(8px);
+        border-radius: 4px;
+      }
+
+      /* Entrance Animations mimic Framer Motion */
+      .fade-in-up-1 {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .fade-in-up-2 {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 200ms forwards;
+      }
+      .fade-in-up-3 {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 400ms forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-spin-slow {
+        animation: spin 20s linear infinite;
+      }
+
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0C0D0F;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1f2023;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D4AF37;
+      }
+
+      /* Selection styling */
+      ::selection {
+        background-color: var(--color-gold);
+        color: var(--color-app-bg);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen selection:bg-gold selection:text-app-bg antialiased">
+    
+    <!-- Global Scroll Progress Indicator -->
+    <div id="scroll-progress-bar" class="fixed top-0 left-0 h-1 bg-gold z-50 transition-all duration-75" style="width: 0%;"></div>
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 w-full z-40 bg-app-bg/80 backdrop-blur-md border-b border-white/5">
+      <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <span class="font-mono text-sm font-medium tracking-tight text-white">SS // TECHNICAL LEAD</span>
+        <div class="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-zinc-500">
+          <a href="#experience" class="hover:text-gold transition-colors">Experience</a>
+          <a href="#ai-projects" class="hover:text-gold transition-colors">AI Projects</a>
+          <a href="#about" class="hover:text-gold transition-colors">About</a>
+          <a href="#contact" class="px-4 py-2 bg-white text-app-bg font-bold tracking-widest hover:bg-gold transition-all">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Dynamic Container -->
+    <main class="pt-16">
+      
+      <!-- Hero Section -->
+      <section class="relative h-[75vh] flex items-center px-6 overflow-hidden">
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div class="fade-in-up-1">
+              <h2 class="text-sm font-sans font-bold text-gold uppercase tracking-[0.3em] mb-2">TPM | Hardware-Software Synergy</h2>
+              <h1 class="text-6xl md:text-7xl font-serif font-bold tracking-tight leading-[0.9] text-white">
+                Technical <br /> Project Lead <br /><span class="text-gold font-light italic serif lowercase">& AI Enthusiast.</span>
+              </h1>
+            </div>
+            
+            <p class="text-lg text-app-text/70 max-w-xl font-light leading-relaxed fade-in-up-2">
+              Translating complexity into clarity. Over a decade of experience spanning technical leadership, customer enabling, enterprise & client security, hardware-software validation and building efficient systems.
+            </p>
+
+            <div class="flex items-center gap-6 fade-in-up-3">
+              <a href="#experience" class="group flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-gold hover:text-white transition-all">
+                Experience Timeline <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="hidden lg:block lg:col-span-5 relative fade-in-up-2">
+            <div class="aspect-[4/5] h-[400px] card-bg relative overflow-hidden backdrop-blur-sm">
+              <div class="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent"></div>
+              <div class="absolute inset-0 flex flex-col justify-end p-6 space-y-4">
+                <div class="space-y-2">
+                  <p class="text-[10px] font-sans font-bold uppercase tracking-widest text-gold">The Grounding Philosophy</p>
+                  <p class="text-xl italic font-serif text-white/90 leading-tight">"Live life as though everything is rigged in your favor."</p>
+                </div>
+                <div class="h-px bg-white/10 w-full"></div>
+                <div class="flex justify-between items-end">
+                  <span class="text-3xl font-serif italic text-gold">2026.</span>
+                  <p class="text-[10px] font-sans font-bold uppercase tracking-widest text-white/40 text-right">Driven by logic,<br />Guided by art.</p>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -top-4 -right-4 w-16 h-16 border border-gold/20 rounded-full flex items-center justify-center animate-spin-slow">
+               <span class="text-[8px] font-mono uppercase tracking-widest text-gold/40 rotate-90">Precision</span>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Impact Stats Block -->
+      <section class="card-bg py-12 text-white overflow-hidden border-x-0">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-2 border-l border-gold pl-6">
+              <h3 class="text-3xl font-serif italic text-gold">17+</h3>
+              <p class="text-white opacity-40 text-[9px] font-sans font-bold uppercase tracking-[0.3em]">Engineering Years</p>
+            </div>
+            <div class="space-y-2 border-l border-white/10 pl-6">
+              <h3 class="text-3xl font-serif italic text-gold">10+</h3>
+              <p class="text-white opacity-40 text-[9px] font-sans font-bold uppercase tracking-[0.3em]">CPU SKU Enabled</p>
+            </div>
+            <div class="space-y-2 border-l border-white/10 pl-6">
+              <h3 class="text-3xl font-serif italic text-gold">50+</h3>
+              <p class="text-white opacity-40 text-[9px] font-sans font-bold uppercase tracking-[0.3em]">Workshops & Demos</p>
+            </div>
+            <div class="space-y-2 border-l border-white/10 pl-6">
+              <h3 class="text-3xl font-serif italic text-gold">30%</h3>
+              <p class="text-white opacity-40 text-[9px] font-sans font-bold uppercase tracking-[0.3em]">Customer Escalation Reduction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Timeline Section -->
+      <section id="experience" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+          
+          <div class="flex flex-col md:flex-row justify-between items-start mb-12 gap-8">
+            <div class="space-y-2">
+              <h3 class="text-xs font-sans font-bold text-gold uppercase tracking-[0.3em]">Professional Backbone</h3>
+              <h2 class="text-4xl font-serif font-bold tracking-tight text-white">Experience Timeline.</h2>
+            </div>
+            <div class="max-w-md space-y-4">
+              <p class="text-white/60 font-light leading-relaxed serif italic text-lg">
+                My career has been built on three pillars: Engineering Excellence, Customer Success and results-driven Project Management.
+              </p>
+              <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/10">
+                <div>
+                  <p class="text-[10px] font-sans font-bold uppercase text-gold tracking-widest">Compute</p>
+                  <p class="text-xs text-white/80">Xeon, Core, Ultra</p>
+                </div>
+                <div>
+                  <p class="text-[10px] font-sans font-bold uppercase text-gold tracking-widest">Security</p>
+                  <p class="text-xs text-white/80">ISRD, SGX, TXT</p>
+                </div>
+                <div>
+                  <p class="text-[10px] font-sans font-bold uppercase text-gold tracking-widest">Storage</p>
+                  <p class="text-xs text-white/80">SATA & PCIe NAND</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Scroller -->
+          <div class="relative" id="experience-timeline-container">
+            
+            <!-- Target Line Guide -->
+            <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-white/5 lg:left-6"></div>
+            
+            <!-- Dynamic vertical progress tracking -->
+            <div id="timeline-bar" class="absolute left-6 top-0 w-0.5 bg-gradient-to-b from-gold via-gold/50 to-transparent z-10 origin-top transition-transform duration-75" style="transform: scaleY(0); height: 100%;"></div>
+
+            <!-- Moving cursor marker -->
+            <div id="timeline-cursor" class="absolute w-3 h-3 bg-gold rounded-full z-20" style="left: calc(1.5rem - 5px); top: 0%; opacity: 0; box-shadow: 0 0 20px #D4AF37; transition: top 0.05s ease-out, opacity 0.2s;"></div>
+
+            <!-- Timeline Entries -->
+            <div class="space-y-12 relative z-10 pl-14">
+              
+              <!-- Entry 1 -->
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 border-l-2 border-transparent hover:border-gold/30 transition-colors py-2 group relative">
+                <div class="absolute left-[-37px] top-4 w-[10px] h-[10px] rounded-full bg-white/10 group-hover:bg-gold transition-colors"></div>
+                <div class="lg:col-span-3">
+                  <span class="text-xs font-sans font-bold uppercase text-gold tracking-widest leading-loose">2022 - 2025</span>
+                  <h4 class="mt-1 font-bold text-lg text-white leading-tight">Technical Project Manager (Customer Enabling)</h4>
+                  <p class="text-[10px] font-sans font-bold uppercase tracking-widest text-white/30">Intel Corporation | Client Computing Group</p>
+                </div>
+                <div class="lg:col-span-9 space-y-4">
+                  <p class="text-base text-white/70 font-light leading-relaxed italic serif">
+                    Leading BIOS release and security features for 1S Xeon workstation, Core, and Core Ultra series processors (2022-2025). Navigating complex matrix organizations.
+                  </p>
+                  <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">BIOS release & client CPU security Vpro features (Core & Core Ultra)</span>
+                    </li>
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">Matrix organization leadership across engineering teams</span>
+                    </li>
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">Navigating ambiguity & strategic tradeoffs (resource, features, priority)</span>
+                    </li>
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">Standardization of processes reducing debug cycles & automation of workflows</span>
+                    </li>
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">Task force management preventing escalations as a Trusted Advisor</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Entry 2 -->
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 border-l-2 border-transparent hover:border-gold/30 transition-colors py-2 group relative">
+                <div class="absolute left-[-37px] top-4 w-[10px] h-[10px] rounded-full bg-white/10 group-hover:bg-gold transition-colors"></div>
+                <div class="lg:col-span-3">
+                  <span class="text-xs font-sans font-bold uppercase text-gold tracking-widest leading-loose">2016 - 2022</span>
+                  <h4 class="mt-1 font-bold text-lg text-white leading-tight">Customer Enabling Engineer</h4>
+                  <p class="text-[10px] font-sans font-bold uppercase tracking-widest text-white/30">Intel Corporation | Client Computing Group</p>
+                </div>
+                <div class="lg:col-span-9 space-y-4">
+                  <p class="text-base text-white/70 font-light leading-relaxed italic serif">
+                    Driving customer enablement for Intel processors security enterprise and client technologies (SGX, ISRD, TXT, VT).
+                  </p>
+                  <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">Customer enablement, trainings, workshops, and demos</span>
+                    </li>
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">Managing collateral schedules to program milestones</span>
+                    </li>
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">Deep dive into ISRD, SGX, and TXT security implementations</span>
+                    </li>
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">Supported Intel processors from 2016-2023 for client segments</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Entry 3 -->
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 border-l-2 border-transparent hover:border-gold/30 transition-colors py-2 group relative">
+                <div class="absolute left-[-37px] top-4 w-[10px] h-[10px] rounded-full bg-white/10 group-hover:bg-gold transition-colors"></div>
+                <div class="lg:col-span-3">
+                  <span class="text-xs font-sans font-bold uppercase text-gold tracking-widest leading-loose">2008 - 2016</span>
+                  <h4 class="mt-1 font-bold text-lg text-white leading-tight">Software Validation Engineer</h4>
+                  <p class="text-[10px] font-sans font-bold uppercase tracking-widest text-white/30">Intel Corporation | Non-Volatile Memory Solutions Group</p>
+                </div>
+                <div class="lg:col-span-9 space-y-4">
+                  <p class="text-base text-white/70 font-light leading-relaxed italic serif">
+                    Deep dive into NAND protocol (SATA, PCIe) and security features validation.
+                  </p>
+                  <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">NAND protocol (SATA & PCIe) and security features validation</span>
+                    </li>
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">Software validation engineering for non-volatile memory solutions</span>
+                    </li>
+                    <li class="flex gap-4 items-start group/item">
+                      <div class="w-1 h-1 rounded-full bg-gold/40 mt-2 group-hover/item:bg-gold transition-colors"></div>
+                      <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-white/40 group-hover/item:text-white/80 transition-colors leading-tight">Contributing to robust product security and reliability</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Pillars Section -->
+      <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="space-y-4 card-bg p-6 hover:bg-gold/5 transition-all">
+             <div class="w-6 h-6 rounded-full border border-gold/30 flex items-center justify-center text-[10px] font-sans font-bold text-gold">01</div>
+             <h3 class="text-lg font-bold tracking-tight text-white">Complexity to Clarity.</h3>
+             <p class="text-white/50 text-xs leading-relaxed font-light">
+               Specializing in translating high-level architectural requirements into actionable engineering roadmaps.
+             </p>
+          </div>
+          
+          <div class="space-y-4 card-bg p-6 hover:bg-gold/5 transition-all">
+             <div class="w-6 h-6 rounded-full border border-gold/30 flex items-center justify-center text-[10px] font-sans font-bold text-gold">02</div>
+             <h3 class="text-lg font-bold tracking-tight text-white">Building Trust.</h3>
+             <p class="text-white/50 text-xs leading-relaxed font-light">
+               Acting as a trusted advisor to global engineering teams, preventing escalations through proactive task force management.
+             </p>
+          </div>
+          
+          <div class="space-y-4 card-bg p-6 hover:bg-gold/5 transition-all">
+             <div class="w-6 h-6 rounded-full border border-gold/30 flex items-center justify-center text-[10px] font-sans font-bold text-gold">03</div>
+             <h3 class="text-lg font-bold tracking-tight text-white">Scalable Outcomes.</h3>
+             <p class="text-white/50 text-xs leading-relaxed font-light">
+               Standardizing processes and automating workflows to reduce debug cycles and drive global product enablement.
+             </p>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- AI Projects Grid -->
+      <section id="ai-projects" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+          
+          <div class="text-center space-y-4 mb-16">
+            <h3 class="text-xs font-sans font-bold text-gold uppercase tracking-[0.3em]">Innovation Focus</h3>
+            <h2 class="text-4xl font-serif font-bold tracking-tight text-white">AI Driven Systems.</h2>
+            <div class="flex flex-wrap justify-center gap-2">
+              <span class="px-2 py-0.5 border border-white/10 text-[8px] font-sans font-bold text-white/40 uppercase tracking-widest rounded-full hover:border-gold/30 hover:text-gold transition-all cursor-default">n8n</span>
+              <span class="px-2 py-0.5 border border-white/10 text-[8px] font-sans font-bold text-white/40 uppercase tracking-widest rounded-full hover:border-gold/30 hover:text-gold transition-all cursor-default">OpenAI/Gemini</span>
+              <span class="px-2 py-0.5 border border-white/10 text-[8px] font-sans font-bold text-white/40 uppercase tracking-widest rounded-full hover:border-gold/30 hover:text-gold transition-all cursor-default">Ollama</span>
+              <span class="px-2 py-0.5 border border-white/10 text-[8px] font-sans font-bold text-white/40 uppercase tracking-widest rounded-full hover:border-gold/30 hover:text-gold transition-all cursor-default">Prompt Engineering</span>
+              <span class="px-2 py-0.5 border border-white/10 text-[8px] font-sans font-bold text-white/40 uppercase tracking-widest rounded-full hover:border-gold/30 hover:text-gold transition-all cursor-default">Process Automation</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Project 1 -->
+            <div class="card-bg p-8 flex flex-col justify-between h-full group hover:-translate-y-1 transition-all">
+              <div class="space-y-4">
+                <div class="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-app-bg transition-colors">
+                  <i data-lucide="zap" class="w-5 h-5"></i>
+                </div>
+                <div class="space-y-1">
+                   <h4 class="text-lg font-bold tracking-tight text-white">LLM-Driven Agent Automation</h4>
+                   <p class="text-[9px] font-sans font-bold text-gold uppercase tracking-widest">n8n, OpenAI, Gemini, Ollama</p>
+                </div>
+                <p class="text-white/50 text-xs leading-relaxed font-light">
+                  An intelligent product search chatbot utilizing large language models for complex queries.
+                </p>
+              </div>
+              <div class="mt-6 flex gap-2">
+                <span class="text-[8px] font-bold uppercase tracking-widest text-white/20 border-b border-white/5 pb-0.5 group-hover:text-gold/60 transition-colors">LLM</span>
+                <span class="text-[8px] font-bold uppercase tracking-widest text-white/20 border-b border-white/5 pb-0.5 group-hover:text-gold/60 transition-colors">Automation</span>
+                <span class="text-[8px] font-bold uppercase tracking-widest text-white/20 border-b border-white/5 pb-0.5 group-hover:text-gold/60 transition-colors">Search</span>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card-bg p-8 flex flex-col justify-between h-full group hover:-translate-y-1 transition-all">
+              <div class="space-y-4">
+                <div class="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-app-bg transition-colors">
+                  <i data-lucide="cpu" class="w-5 h-5"></i>
+                </div>
+                <div class="space-y-1">
+                   <h4 class="text-lg font-bold tracking-tight text-white">Automated Web Scraping System</h4>
+                   <p class="text-[9px] font-sans font-bold text-gold uppercase tracking-widest">LLM, HTML Parsing</p>
+                </div>
+                <p class="text-white/50 text-xs leading-relaxed font-light">
+                  High-efficiency data extraction system using advanced parsing for automated intelligence gathering.
+                </p>
+              </div>
+              <div class="mt-6 flex gap-2">
+                <span class="text-[8px] font-bold uppercase tracking-widest text-white/20 border-b border-white/5 pb-0.5 group-hover:text-gold/60 transition-colors">Data Extraction</span>
+                <span class="text-[8px] font-bold uppercase tracking-widest text-white/20 border-b border-white/5 pb-0.5 group-hover:text-gold/60 transition-colors">Scraping</span>
+                <span class="text-[8px] font-bold uppercase tracking-widest text-white/20 border-b border-white/5 pb-0.5 group-hover:text-gold/60 transition-colors">LLM</span>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card-bg p-8 flex flex-col justify-between h-full group hover:-translate-y-1 transition-all">
+              <div class="space-y-4">
+                <div class="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-app-bg transition-colors">
+                  <i data-lucide="message-square" class="w-5 h-5"></i>
+                </div>
+                <div class="space-y-1">
+                   <h4 class="text-lg font-bold tracking-tight text-white">Triage Chatbot</h4>
+                   <p class="text-[9px] font-sans font-bold text-gold uppercase tracking-widest">LLM, Log Parsing</p>
+                </div>
+                <p class="text-white/50 text-xs leading-relaxed font-light">
+                  Automated error classification and log parsing for internal documents and self-service support.
+                </p>
+              </div>
+              <div class="mt-6 flex gap-2">
+                <span class="text-[8px] font-bold uppercase tracking-widest text-white/20 border-b border-white/5 pb-0.5 group-hover:text-gold/60 transition-colors">AI Support</span>
+                <span class="text-[8px] font-bold uppercase tracking-widest text-white/20 border-b border-white/5 pb-0.5 group-hover:text-gold/60 transition-colors">Log Analysis</span>
+                <span class="text-[8px] font-bold uppercase tracking-widest text-white/20 border-b border-white/5 pb-0.5 group-hover:text-gold/60 transition-colors">Triage</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-20 px-6 overflow-hidden">
+        <div class="max-w-4xl mx-auto space-y-10">
+          <div class="space-y-4 text-center">
+            <h3 class="text-xs font-sans font-bold text-gold uppercase tracking-[0.3em] flex items-center justify-center gap-3">
+               About Me
+            </h3>
+            <h2 class="text-4xl font-serif font-bold tracking-tight text-white mb-6">Beyond the code.</h2>
+          </div>
+
+          <div class="space-y-6 text-white/60 font-light leading-relaxed text-lg serif italic text-center max-w-3xl mx-auto">
+            <p>
+              A dreamer, a lover, a wife, and a mother. My journey to the United States was a leap from dream to decision—a bittersweet transition filled with new faces, deeper relations, and profound learnings. 
+            </p>
+            <p>
+              Braving into the unknown has shaped me both professionally and personally. I've found a "home away from home" by embracing growth and transformation at every step.
+            </p>
+            <p>
+              My perspective is shaped by travel, art, and the quiet reflection of journaling. Reading isn't just a hobby; it's the lens through which I see complexity and find clarity.
+            </p>
+          </div>
+
+          <div class="pt-8 border-t border-white/5 max-w-xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
+              <div class="flex flex-col items-center">
+                <span class="text-[7px] font-sans font-bold uppercase text-gold tracking-widest mb-0.5">Current Focus</span>
+                <span class="font-bold text-white text-xs">AI, TPM, Security</span>
+              </div>
+              <div class="hidden md:block w-px h-8 bg-white/5"></div>
+              <div class="flex flex-col items-center">
+                <span class="text-[7px] font-sans font-bold uppercase text-gold tracking-widest mb-0.5">Interests</span>
+                <span class="font-bold text-white text-xs">Travel, Art, Journaling</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Philosophy Quote Banner -->
+      <section class="py-24 flex items-center justify-center px-6 border-y border-white/5">
+        <div class="max-w-3xl text-center space-y-8">
+          <h2 class="text-3xl md:text-5xl font-serif italic font-light text-white leading-tight">
+            "Live life as though everything is <br class="hidden md:block" /> rigged in your <span class="text-gold">favor.</span>"
+          </h2>
+          <div class="w-10 h-px bg-gold/40 mx-auto"></div>
+          <p class="text-[9px] font-sans font-bold uppercase tracking-[0.4em] text-gold/60">The Grounding Philosophy</p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-24 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto flex flex-col items-center text-center space-y-12">
+          
+          <div class="space-y-6">
+            <h2 class="text-5xl md:text-7xl font-serif font-bold tracking-tight leading-[0.85] text-white">
+              Let's build & <br /> 
+              <span class="italic text-gold font-light lowercase serif">create impact together.</span>
+            </h2>
+            <p class="text-white/40 font-light max-w-xl mx-auto italic serif text-lg">
+              Connect, Converse and Share Ideas.
+            </p>
+          </div>
+          
+          <div class="flex flex-wrap justify-center gap-12 md:gap-24">
+            <a href="mailto:supreeti.sehra@gmail.com" class="group flex flex-col gap-1 text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-white/40 hover:text-gold transition-colors">
+              <span class="text-[8px] text-gold/40">Collaborate VIA</span> <span class="flex items-center gap-2 justify-center"><i data-lucide="mail" class="w-3 h-3"></i> Email</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="group flex flex-col gap-1 text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-white/40 hover:text-gold transition-colors">
+              <span class="text-[8px] text-gold/40">Connect ON</span> <span class="flex items-center gap-2 justify-center"><i data-lucide="linkedin" class="w-3 h-3"></i> LinkedIn</span>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noreferrer" class="group flex flex-col gap-1 text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-white/40 hover:text-gold transition-colors">
+              <span class="text-[8px] text-gold/40">Explore ON</span> <span class="flex items-center gap-2 justify-center"><i data-lucide="github" class="w-3 h-3"></i> GitHub</span>
+            </a>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Footer Bar -->
+      <footer class="py-8 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <p class="text-[8px] font-sans font-bold uppercase tracking-[0.4em] text-white/20">© 2026 Supreeti Sehra. Driven by logic, guided by art.</p>
+          <div class="flex gap-8">
+             <span class="text-[8px] font-sans font-bold uppercase tracking-[0.2em] text-white/40">Portfolio.</span>
+             <span class="text-[8px] font-sans font-bold uppercase tracking-[0.2em] text-white/40 italic serif">V. 1.1</span>
+          </div>
+        </div>
+      </footer>
+      
+    </main>
+
+    <!-- Lucide Icon initialization agent -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      // Load and apply icons
+      lucide.createIcons();
+
+      // Scroll Progress Indicator Logic
+      window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('scroll-progress-bar').style.width = scrolled + '%';
+      });
+
+      // Experience Timeline Interactive Scrolling Vertical Tracker Logic
+      const timelineSect = document.getElementById('experience-timeline-container');
+      const timelineBar = document.getElementById('timeline-bar');
+      const timelineCursor = document.getElementById('timeline-cursor');
+
+      function updateTimeline() {
+        if (!timelineSect || !timelineBar || !timelineCursor) return;
+        const rect = timelineSect.getBoundingClientRect();
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const elementTop = rect.top + scrollTop;
+        const elementHeight = rect.height;
+        const viewportHeight = window.innerHeight;
+
+        // Custom triggers mimicking Framer's ("start center", "end center") mapping
+        const startPoint = elementTop - viewportHeight / 2;
+        const endPoint = elementTop + elementHeight - viewportHeight / 2;
+        
+        let progress = (scrollTop - startPoint) / (endPoint - startPoint);
+        progress = Math.max(0, Math.min(1, progress));
+
+        timelineBar.style.transform = `scaleY(${progress})`;
+        timelineCursor.style.top = `${progress * 100}%`;
+        
+        if (progress > 0.01 && progress < 0.99) {
+          timelineCursor.style.opacity = '1';
+        } else {
+          timelineCursor.style.opacity = '0';
+        }
+      }
+
+      window.addEventListener('scroll', updateTimeline);
+      window.addEventListener('resize', updateTimeline);
+      // Trigger update on initial page render
+      setTimeout(updateTimeline, 100);
+    </script>
+  </body>
+</html>
